@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePaymentProofTable extends Migration
+class CreatePaymentChannelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreatePaymentProofTable extends Migration
      */
     public function up()
     {
-        Schema::create('payment_proof', function (Blueprint $table) {
+        Schema::create('payment_channels', function (Blueprint $table) {
             $table->id();
-            $table->string('transaction_id');
-            $table->integer('payment_channel_id');
-            $table->string('file');
+            $table->string('name');
+            $table->text('description');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -30,6 +29,6 @@ class CreatePaymentProofTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payment_proof');
+        Schema::dropIfExists('payment_channels');
     }
 }

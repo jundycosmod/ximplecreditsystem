@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePaymentChannelTable extends Migration
+class CreateAddressTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreatePaymentChannelTable extends Migration
      */
     public function up()
     {
-        Schema::create('payment_channel', function (Blueprint $table) {
+        Schema::create('address_types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -29,6 +28,6 @@ class CreatePaymentChannelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payment_channel');
+        Schema::dropIfExists('address_types');
     }
 }
