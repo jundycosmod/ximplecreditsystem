@@ -46,5 +46,36 @@ return [
         ],
     ],
 
+    'address-type' => [
+        'title' => 'Address Types',
+
+        'actions' => [
+            'index' => 'Address Types',
+            'create' => 'New Address Type',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            
+        ],
+    ],
+
+    'address-type' => [
+        'title' => 'Address Types',
+
+        'actions' => [
+            'index' => 'Address Types',
+            'create' => 'New Address Type',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];
