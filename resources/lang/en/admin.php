@@ -77,5 +77,41 @@ return [
         ],
     ],
 
+    'role' => [
+        'title' => 'Roles',
+
+        'actions' => [
+            'index' => 'Roles',
+            'create' => 'New Role',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'name' => 'Name',
+            'guard_name' => 'Guard name',
+            
+        ],
+    ],
+
+    'creditor' => [
+        'title' => 'Creditors',
+
+        'actions' => [
+            'index' => 'Creditors',
+            'create' => 'New Creditor',
+            'edit' => 'Edit :name',
+        ],
+
+        'columns' => [
+            'id' => 'ID',
+            'first_name' => 'First name',
+            'middle_name' => 'Middle name',
+            'last_name' => 'Last name',
+            'is_active' => 'Is active',
+            
+        ],
+    ],
+
     // Do not delete me :) I'm used for auto-generation
 ];

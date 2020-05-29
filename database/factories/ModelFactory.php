@@ -46,3 +46,28 @@ $factory->define(App\Models\AddressType::class, static function (Faker\Generator
         
     ];
 });
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Role::class, static function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->firstName,
+        'guard_name' => $faker->sentence,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});
+/** @var  \Illuminate\Database\Eloquent\Factory $factory */
+$factory->define(App\Models\Creditor::class, static function (Faker\Generator $faker) {
+    return [
+        'first_name' => $faker->firstName,
+        'middle_name' => $faker->sentence,
+        'last_name' => $faker->lastName,
+        'is_active' => $faker->boolean(),
+        'deleted_at' => null,
+        'created_at' => $faker->dateTime,
+        'updated_at' => $faker->dateTime,
+        
+        
+    ];
+});

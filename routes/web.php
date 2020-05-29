@@ -73,3 +73,33 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
         });
     });
 });
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('Admin')->name('admin/')->group(static function() {
+        Route::prefix('roles')->name('roles/')->group(static function() {
+            Route::get('/',                                             'RolesController@index')->name('index');
+            Route::get('/create',                                       'RolesController@create')->name('create');
+            Route::post('/',                                            'RolesController@store')->name('store');
+            Route::get('/{role}/edit',                                  'RolesController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'RolesController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{role}',                                      'RolesController@update')->name('update');
+            Route::delete('/{role}',                                    'RolesController@destroy')->name('destroy');
+        });
+    });
+});
+
+/* Auto-generated admin routes */
+Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->group(static function () {
+    Route::prefix('admin')->namespace('Admin')->name('admin/')->group(static function() {
+        Route::prefix('creditors')->name('creditors/')->group(static function() {
+            Route::get('/',                                             'CreditorsController@index')->name('index');
+            Route::get('/create',                                       'CreditorsController@create')->name('create');
+            Route::post('/',                                            'CreditorsController@store')->name('store');
+            Route::get('/{creditor}/edit',                              'CreditorsController@edit')->name('edit');
+            Route::post('/bulk-destroy',                                'CreditorsController@bulkDestroy')->name('bulk-destroy');
+            Route::post('/{creditor}',                                  'CreditorsController@update')->name('update');
+            Route::delete('/{creditor}',                                'CreditorsController@destroy')->name('destroy');
+        });
+    });
+});
